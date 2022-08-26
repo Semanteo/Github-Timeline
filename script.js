@@ -19,9 +19,9 @@ if(getUrlParameter('username') != ''){
       repos.sort(function (a, b) {
         var dateA = new Date(a.created_at.split("T")[0]), dateB = new Date(b.created_at.split("T")[0])
         if (getUrlParameter('radio') == "asc") {
-          return dateB - dateA
-        } else {
           return dateA - dateB
+        } else {
+          return dateB - dateA
         }
       })
       for(var i = 0; i < repos.length; i++) {
