@@ -16,6 +16,6 @@ And it's finish ^^
 - [x] Show name, date and description
 - [x] Use only the colors of Github Dark Theme
 - [x] Link to the repos
-- [ ] Sort by ascending or descending
+- [x] Sort by ascending or descending
 - [ ] Adding more infos
 - [ ] Implementation possible in READMEs

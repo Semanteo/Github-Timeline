@@ -7,6 +7,7 @@ function getUrlParameter(name) {
 let repos = [];
 if(getUrlParameter('username') != ''){
     document.getElementById("user").value = getUrlParameter('username');
+    document.getElementById(getUrlParameter("radio")).checked = true;
     fetch('https://api.github.com/users/' + getUrlParameter('username') + '/repos')
     .then(async response => {return await response.json()})
     .then(data => {
@@ -17,7 +18,11 @@ if(getUrlParameter('username') != ''){
     }).then(() => {
       repos.sort(function (a, b) {
         var dateA = new Date(a.created_at.split("T")[0]), dateB = new Date(b.created_at.split("T")[0])
-        return dateA - dateB
+        if (getUrlParameter('radio') == "asc") {
+          return dateB - dateA
+        } else {
+          return dateA - dateB
+        }
       })
       for(var i = 0; i < repos.length; i++) {
         var li = document.createRange().createContextualFragment(`

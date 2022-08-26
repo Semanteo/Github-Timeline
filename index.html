@@ -16,11 +16,20 @@
         <div class="container" id="form_div">
             <form>
                 <input type="text" name="username" id="user" placeholder="Github Username"><br>
+                <label class="container">Ascending
+                    <input id="asc" class="option-input radio" type="radio" name="radio" value="asc">
+            
+                  </label>
+                  
+                  <label class="container">Descending
+                    <input id="desc" class="option-input radio" type="radio" name="radio" value="desc">
+                  </label>
+                  <br>
                 <input type="submit" value="Generate">
             </form>
         </div>
         <div class="container" id="form_div">
-            <button onclick="view_on_github()">View on Github</button>
+            <button onclick="view_on_github()">View on Github</button><br>
         </div>
       </section>
       
