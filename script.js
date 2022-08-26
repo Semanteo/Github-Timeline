@@ -69,3 +69,8 @@ if(getUrlParameter('username') != ''){
     window.addEventListener("resize", callbackFunc);
     window.addEventListener("scroll", callbackFunc);
   })();
+
+
+function view_on_github(){
+    window.open('https://github.com/Semanteo/Github-Timeline', '__blank');
+}
