@@ -7,7 +7,8 @@
 ## How it works ?
 
 1. Enter the username you want
-2. Click on **Generate !**
+2. Choose between the ascending or descending order
+3. Click on **Generate !**
 
 And it's finish ^^ 
 
