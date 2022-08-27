@@ -99,7 +99,7 @@ time:hover{
 .timeline ul li div {
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .timeline ul li:nth-child(odd) div {
     transform: translate3d(200px, 0, 0);
