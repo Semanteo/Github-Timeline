@@ -1,5 +1,5 @@
 # Github-Timeline
- ![image](https://user-images.githubusercontent.com/55351251/186970913-677f53ea-cbad-44d0-9f96-0f0c6c07b247.png)
+![image](https://user-images.githubusercontent.com/55351251/187021084-bf05464a-c109-46c1-aa27-b8f801cdbf84.png)
 
 ## What is it ?
 
@@ -15,13 +15,15 @@ And it's finish ^^
 
 
 - [x] Sort by date
-- [x] Show name, date and description
+- [x] Show name, dates, language, stars, description and if it's a fork
 - [x] Use only the colors of Github Dark Theme
 - [x] Link to the repos
 - [x] Sort by ascending or descending
-- [ ] Adding more infos
+- [x] Adding more infos
 - [ ] Implementation possible in READMEs
 
 ## Contributions
 
 Be free to contribute and open prs or issues to improve the code !
+
+If you want more infos on repos please open an issue !
