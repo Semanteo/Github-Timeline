@@ -27,7 +27,6 @@ h1 {
 }
 .timeline ul {
     background: #0d1117;
-    padding: 50px 0;
 }
 .timeline ul li {
     list-style-type: none;
@@ -308,3 +307,22 @@ button {
         opacity: 0;
     }
 }
+
+.containerbackground {
+    margin: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    bottom: 0;
+    right:0;
+    color: white;
+    background-color: transparent !important;
+}
+  .containerbackground:hover {
+    text-decoration: underline;
+    background: #f78166;
+    color: #f78166;
+    cursor: pointer;
+  }
+  

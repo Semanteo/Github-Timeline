@@ -4,6 +4,23 @@ function getUrlParameter(name) {
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
+function getMonth(month){
+  let months = {
+    "01": "Jan",
+    "02": "Feb",
+    "03": "Mar",
+    "04": "Apr",
+    "05": "May",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Aug",
+    "09": "Sep",
+    "10": "Oct",
+    "11": "Nov",
+    "12": "Dec"
+  }
+  return months[month];
+}
 let repos = [];
 if(getUrlParameter('username') != ''){
     document.getElementById("user").value = getUrlParameter('username');
@@ -26,7 +43,12 @@ if(getUrlParameter('username') != ''){
       })
       fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json").then(async res => {return await res.json()})
       .then(data => {
+
+      let year_to = repos[0].created_at.split("-")[0];
+      let month_to = repos[0].created_at.split("-")[1];
       for(var i = 0; i < repos.length; i++) {
+        let repo_year = repos[i].created_at.split("-")[0];
+        let repo_month = repos[i].created_at.split("-")[1];
         var li = document.createRange().createContextualFragment(`
         <li>
         <div>
@@ -41,6 +63,27 @@ if(getUrlParameter('username') != ''){
           </div>
         </li>
         `);
+        var year = document.createRange().createContextualFragment(`
+        <h1 class="containerbackground">
+        ${repo_year}
+        </h1>
+        <p></p>
+        `)
+        var month = document.createRange().createContextualFragment(`
+        <h2 class="containerbackground">
+        ${getMonth(repo_month)}
+        </h2>
+        <p></p>
+        `)
+        
+        if(year_to != repo_year || i == 0){
+        document.getElementById('timeline').append(year);
+        year_to = repo_year;
+        }
+        if(month_to != repo_month || i == 0){
+          document.getElementById('timeline').append(month);
+          month_to = repo_month;
+          }
         document.getElementById('timeline').append(li);
       }  
       }).catch(err => {
