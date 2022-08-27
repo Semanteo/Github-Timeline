@@ -1,5 +1,5 @@
 # Github-Timeline
-![image](https://user-images.githubusercontent.com/55351251/187021084-bf05464a-c109-46c1-aa27-b8f801cdbf84.png)
+![image](https://user-images.githubusercontent.com/55351251/187036070-86454833-9bf0-406c-865a-243cb7b8fcc5.png)
 
 <br>
 <span align="center">
