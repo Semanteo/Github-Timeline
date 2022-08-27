@@ -84,7 +84,11 @@ time {
     display: block;
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+time:hover{
+    color: #0d1117;
 }
 .timeline ul li::after {
     transition: background 0.5s ease-in-out;
