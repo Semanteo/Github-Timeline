@@ -26,13 +26,18 @@
 And it's finish ^^ 
 
 ## Features
+### 26/08/2022
 - [x] Sort by date | 26/08/2022
-- [x] Show name, date and description | 26/08/2022
-- [x] Use only the colors of Github Dark Theme | 26/08/2022
-- [x] Link to the repos | 26/08/2022
-- [x] Sort by ascending or descending | 26/08/2022
-- [x] Adding more infos | 26-27/08/2022
-- [x] Adding last update date, language, stars counter and if it's a fork | 27/08/2022
+- [x] Show name, date and description
+- [x] Use only the colors of Github Dark Theme
+- [x] Link to the repos
+- [x] Sort by ascending or descending
+
+### 27/08/2022
+- [x] Adding last update date, language, stars counter and if it's a fork
+- [x] Adding Years and Months to the Timeline
+
+### Future
 - [ ] Implementation possible in READMEs
 
 ## Contributions
