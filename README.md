@@ -37,6 +37,9 @@ And it's finish ^^
 - [x] Adding last update date, language, stars counter and if it's a fork
 - [x] Adding Years and Months to the Timeline
 
+### 28/08/2022
+- [x] Adding the ability to choose a date to autoscroll to
+
 ### Future
 - [ ] Implementation possible in READMEs
 
