@@ -64,13 +64,13 @@ if(getUrlParameter('username') != ''){
         </li>
         `);
         var year = document.createRange().createContextualFragment(`
-        <h1 class="containerbackground">
+        <h1 onclick="addScroll('${repo_year}')" id="${repo_year}" class="containerbackground">
         ${repo_year}
         </h1>
         <p></p>
         `)
         var month = document.createRange().createContextualFragment(`
-        <h2 class="containerbackground">
+        <h2 onclick="addScroll('${repo_year}-${getMonth(repo_month)}')" id="${repo_year}-${getMonth(repo_month)}" class="containerbackground">
         ${getMonth(repo_month)}
         </h2>
         <p></p>
@@ -86,7 +86,11 @@ if(getUrlParameter('username') != ''){
           }
         document.getElementById('timeline').append(li);
       }  
-      }).catch(err => {
+    }).then(() => {
+      if(getUrlParameter('scroll') != ""){
+        window.scrollTo(document.getElementById(getUrlParameter("scroll")).getBoundingClientRect().left,document.getElementById(getUrlParameter("scroll")).getBoundingClientRect().top);
+      } 
+    }).catch(err => {
           console.log(err)
         })
         
@@ -94,6 +98,7 @@ if(getUrlParameter('username') != ''){
     .catch(err => {
       alert(`${getUrlParameter('username')} is not a valid username`);
     })
+
   }
   else{}
 
@@ -142,4 +147,10 @@ function hoverFunc(i){
 function outFunc(i){
   if (document.getElementById(`git-star-${i}`)) document.getElementById(`git-star-${i}`).src = "./img/git-star.svg";
   if (document.getElementById(`git-fork-${i}`)) document.getElementById(`git-fork-${i}`).src = "./img/git-fork.svg";
+}
+
+function addScroll(loc){
+  let new_loc = location.search
+  new_loc =  location.search.split("&")[0] +"&" + location.search.split("&")[1]
+  location.search = `${new_loc}&scroll=${loc}`
 }
