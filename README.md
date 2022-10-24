@@ -40,6 +40,9 @@ And it's finish ^^
 ### 28/08/2022
 - [x] Adding the ability to choose a date to autoscroll to
 
+### 24/10/2022
+- [x] Compressing of HTML, CSS and JS to reduce the size of files
+
 ### Future
 - [ ] Implementation possible in READMEs
 
