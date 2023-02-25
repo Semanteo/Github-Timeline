@@ -43,6 +43,9 @@ And it's finish ^^
 ### 24/10/2022
 - [x] Compressing of HTML, CSS and JS to reduce the size of files
 
+### 25/02/2023
+- [x] Shorten long names
+
 ### Future
 - [ ] Implementation possible in READMEs
 
