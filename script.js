@@ -6,7 +6,7 @@ if(getUrlParameter('radio')=="asc"){return dateA-dateB}else{return dateB-dateA}}
 fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json").then(async res=>{return await res.json()}).then(data=>{let year_to=repos[0].created_at.split("-")[0];let month_to=repos[0].created_at.split("-")[1];for(var i=0;i<repos.length;i++){let repo_year=repos[i].created_at.split("-")[0];let repo_month=repos[i].created_at.split("-")[1];var li=document.createRange().createContextualFragment(`
         <li>
         <div>
-        <time onmouseover="hoverFunc(${i})" onmouseout="outFunc(${i})" onclick='window.open("${repos[i].html_url}", "__blank")'>${repos[i].fork?`<img id="git-fork-${i}" src="./img/git-fork.svg"/>`:""}${repos[i].name} -  ${repos[i].stargazers_count} <img id="git-star-${i}" src='./img/git-star.svg'/></time>
+        <time onmouseover="hoverFunc(${i})" onmouseout="outFunc(${i})" onclick='window.open("${repos[i].html_url}", "__blank")'>${repos[i].fork?`<img id="git-fork-${i}" src="./img/git-fork.svg"/>`:""}${repos[i].name.length>25?repos[i].name.substr(0,25) + '\u2026':repos[i].name} -  ${repos[i].stargazers_count} <img id="git-star-${i}" src='./img/git-star.svg'/></time>
         <p style="color: #0d1117;">Created ${repos[i].created_at.split("T")[0]} - Last update ${repos[i].updated_at.split("T")[0]}</p>
         <p>${repos[i].description?repos[i].description:'No description'}</p>
         <br>
